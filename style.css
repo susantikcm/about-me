@@ -1,0 +1,29 @@
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 0px;
+}
+
+.navbar {
+    display: inline-flex;
+    background-color: cadetblue;
+    width: 100%;
+}
+
+.navbar > a, .navbar > span {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 15px;
+}
+
+article {
+    padding: 10px;
+}
+
+.profile{
+    text-align: center;
+}
+
+.profile-picture {
+    border-radius: 50%;
+}
