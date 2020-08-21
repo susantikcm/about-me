@@ -7,7 +7,7 @@ body {
 .navbar {
     display: inline-flex;
     background-color: cadetblue;
-    width: 100%;
+    min-width: 100%;
 }
 
 .navbar > a, .navbar > span {
