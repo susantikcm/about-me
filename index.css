@@ -1,0 +1,39 @@
+body {
+    font-family: "Open Sans", Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-top: 80px;
+    color: teal;
+}
+
+.navbar {
+    display: inline-flex;
+    background-color: cadetblue;
+    min-width: calc(100% -  1em);
+}
+
+.navbar > a, .navbar > span {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 15px;
+}
+
+article {
+    padding: 10px;
+}
+
+.profile{
+    text-align: center;
+}
+
+.profile-picture {
+    border: 5px solid cadetblue;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.back-button {
+    background: none;
+    border: 0px;
+    color: teal;
+    font-weight: bold;
+}

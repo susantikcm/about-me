@@ -2,64 +2,100 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Susanti</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" type="text/css" >
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Photo Grid</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="index.css" type="text/css">
 </head>
 
 <body>
-    <header>
-        <nav class="navbar">
-            <!-- <span>Susanti</span> -->
-            <a href="#Profile">Profile</a>
-            <a href="#experiences">Experiences</a>
-            <a href="#hobbies">Hobbies</a>
-        </nav>
-    </header>
-    <Article>
-        <section id="Profile" class="profile">
-            <img class="profile-picture" src="./libs/images/0.jpg" min-width="100" alt="no profile image" />
-            <h4>Susanti Khang</h4>
-            <p><small>(pretending as)</small> Web Developer in Sydney, Australia.</p>
-        </section>
-        <section>
-            <h4>About me:</h4>
-            <p>
-                I am boring but friendly. :)
-            </p>
-        </section>
-        <section>
-            <h4>Contacts:</h4>
-            <ul type="circle">
-                <li><a href="https://www.linkedin.com/in/susanti-khang/">LinkedIn</a></li>
-                <li><a href="https://github.com/susantikcm/">GitHub</a></li>
-            </ul>
-        </section>
-        <section id="experiences">
-            <h4>Experiences:</h4>
-            <ul type="circle">
-                <li>Software Developer</li>
-                <li>Business Analyst</li>
-            </ul>
-        </section>
-        <section id="hobbies">
-            <h4>Hobbies:</h4>
-            <ul type="square">
-                <li>Eating</li>
-                <li>I like traveling to beautiful place.</li>
-                <li>I regularly practice meditation, and this is the key to me being calm, methodological in most situations and able to find solutions.</li>  
-                <li>I am currently learning fishing. I find this therapeutic. So far, no fish have been captured by me… I need practice!</li>
-                <li>I like Archery.</li>
-                <li>After taking up Ice-Skating a number of years back, I became junior coach to under 10’s and beginners.</li>
-                <li>I love Badminton and used to play all the time.</li>
-            </ul>
-        </section>
-    </Article>
-    <footer>
+  <div class="container overflow-hidden justify-content-center">
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg fixed-top p-0">
+      <a href="#" class="navbar-brand d-none d-md-block">Susanti</a>
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="navbar-item">
+            <a href="./index.html" class="nav-link">Home</a>
+          </li>
+          <li class="navbar-item">
+            <a href="./src/photo-grid.html" class="nav-link">Photo Grid</a>
+          </li>
+          <li class="navbar-item">
+            <a href="./src/iphone.html" class="nav-link">Products</a>
+          </li>
+          <li class="navbar-item">
+            <a href="./src/about-me.html" class="nav-link">About Me</a>
+          </li>
+          <li class="navbar-item">
+            <a href="./contact-me.html" class="nav-link">Contact Me</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
-    </footer>
+    <div class="col-md-8 mx-auto">
+      <h1>Music performance</h1>
+      <h3>Sign Up</h3>
+      <br />
+      <form>
+        <div class="form-group row">
+          <label class="col-xl-4 col-form-label" for="fullname">Full Name</label>
+          <div class="col">
+            <input type="text" class="form-control" id="fullname">
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label class="col-xl-4 col-form-label" for="music">Type of Music</label>
+          <div class="col">
+            <select class="custom-select custom-select-sm">
+              <option value="orchestra">Orchestra</option>
+              <option value="junior-band">Junior Band</option>
+              <option value="rock-band">Rock Band</option>
+              <option value="string">String</option>
+              <option value="choir">choir</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label class="col-xl-4 col-form-label" for="instrument">Do you own music instrument?</label>
+          <div class="input-group col">
+            <div class="input-group-prepend">
+              <div class="input-group-text">
+                <input type="checkbox" class="form-check" id="instrument-check" onclick="enableInstrumentInput()">
+              </div>
+            </div>
+            <input type="text" class="form-control" id="instrument-input" disabled>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col offset-xl-4 d-flex justify-content-between">
+            <button type="cancel" class="btn btn-dark">Cancel</button>
+            <button type="submit" class="btn btn-dark">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+  <script src="src/script.js"></script>
 </body>
 
 </html>

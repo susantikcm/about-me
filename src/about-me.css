@@ -7,7 +7,7 @@ body {
 .navbar {
     display: inline-flex;
     background-color: cadetblue;
-    min-width: 100%;
+    min-width: calc(100% -  1em);
 }
 
 .navbar > a, .navbar > span {
@@ -29,4 +29,4 @@ article {
     border: 5px solid cadetblue;
     border-radius: 50%;
     padding: 5px;
-}s
+}
